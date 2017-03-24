@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" type="text/css" href="styles/main.css">
+
+<style>
+body {
+	margin: 0;
+	background: #8e9eab; /* fallback for old browsers */
+	background: -webkit-radial-gradient(circle, #8e9eab 1%, #eef2f3) no-repeat center center fixed; /* Chrome 10-25, Safari 5.1-6 */
+	background: radial-gradient(circle, #8e9eab 1% , #eef2f3) no-repeat center center fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+
+}
+
+.header {
+	position: fixed;
+	left: 0; top:40px; right: 0;
+	height: 60px;
+	background-color: rgba(255,255,255,.7);
+	text-align: center;
+	padding-top: 10px;
+	color: red;
+	text-shadow: 2px 5px 15px;
+	font-size: 30px;
+	font-family: impact;
+}
+
+.home-img{
+	margin: 60px auto 0;
+	position: relative;
+	width: 1000px;
+	height: 500px;
+	border: solid white 1px;
+	overflow: hidden;
+}
+
+.home-img img{
+	position: absolute;
+	width: 1000px;
+}
+
+#home-cover1{
+	position: absolute;
+	width: 333px;
+	height: 200px;
+	background-color: rgba(0,0,0,.5);
+	top: 150px; left: -333px;
+}
+
+#home-cover2{
+	position: absolute;
+	width: 333px;
+	height: 200px;
+	background-color: rgba(0,0,0,.5);
+	bottom: -183px; left: 333px;
+}
+
+#home-cover3{
+	position: absolute;
+	width: 333px;
+	height: 200px;
+	background-color: rgba(0,0,0,.5);
+	left: 999px; top: 150px;
+}
+
+.home-btn{
+	padding-top: 13px;
+	position: absolute;
+	width: 180px;
+	height: 32px;
+	background-color: rgba(0,0,0,.9);
+	border: solid white 1px;
+	border-radius: 5px;
+	left: 76px; top: 35px;
+	text-align: center;
+	color: beige;
+}
+
+.home-btn:hover{
+	color: black;
+	background-color: beige;
+	transition: .4s;
+}
+
+.home-btn a{
+	color: white;
+	text-decoration: none;
+}
+
+#home-btn1{
+	font-family: Arial;
+	font-size: 14px;
+}
+
+#home-btn2{
+	font-family: Arial;
+	font-size: 14px;
+}
+
+#home-btn3{
+	font-family: Arial;
+	font-size: 14px;
+}
+
+
+.home-description{
+	color: white;
+	font-size: 16px;
+	font-family: impact;
+	text-align: center;
+	margin-top: 90px;
+}
+
+.home-footer{
+	margin: 0px auto;
+	width: 1000px;
+	height: 20px;
+	background-color: black;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	padding-top: 8px;
+}
+
+/*ANIMATION*/
+
+@keyframes homebtnborder {
+  from {
+    border-color: white;
+  }
+
+  to {
+    border-color: grey;
+  }
+}
+
+#home-btn1 {
+  animation-duration: 1.5s;
+  animation-name: homebtnborder;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#home-btn2 {
+  animation-duration: 2.5s;
+  animation-name: homebtnborder;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#home-btn3 {
+  animation-duration: 2s;
+  animation-name: homebtnborder;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+</style>
+</head>
+<body>
+<nav>
+	<div><a href="index.html">HOME</a></div>
+	<div><a href="clarinet.html">CLARINET</a></div>
+	<div><a href="audio-engineering.html">AUDIO ENGINEERING</a></div>
+	<div><a href="electronic-music.html">ELECTRONIC MUSIC</a></div>
+	<div id="contact-nav"><a onclick="openContact()">CONTACT</a></div>
+</nav>
+
+
+<div class="home-img">
+	<img src="images/front_img_w2400h1200.png">
+	<div id="home-cover1">
+		<a href="clarinet.html"><div type="button" class="home-btn" id="home-btn1">CLARINET</div></a>
+		<div class="home-description">
+			Electronic Clarinet<br>
+			Discography<br>
+			Clarinet Tutorials
+		</div>
+	</div>
+	<div id="home-cover2">
+		<a href="audio-engineering.html"><div type="button" class="home-btn" id="home-btn2">AUDIO ENGINEERING</div></a>
+		<div class="home-description">
+			Mastering Projects<br>
+			Video Production Services<br>
+			Equipment
+		</div>
+	</div>
+	<div id="home-cover3">
+		<a href="electronic-music.html"><div type="button" class="home-btn" id="home-btn3">ELECTRONIC MUSIC</div></a>
+		<div class="home-description">
+			Electronic Music releases of alias "Kronodigger"<br>
+			Special Projects<br>
+			Mixes
+		</div>
+	</div>
+</div>
+<div class="home-footer">
+&copy; Alexey Gorokholinsky, 2017
+</div>
+
+
+<!-- CONTACT -->
+
+<div id="contact" class="lightbox">
+	<div class="lightbox-window">
+		<div id="my-contact-form" method="post">
+			<label>Name: <span class="span-red">*</span><br>
+				<input class="input-field" type="text" name="name" placeholder="" value="">
+			</label><br><br>
+			<label>Email: <span class="span-red">*</span><br>
+				<input class="input-field" type="email" placeholder="" name="email" value="">
+			</label><br><br><br>
+			<label>Your Message Here:<br>
+				<textarea class="my-text-area"  name="message"></textarea>
+			</label>
+			<br>
+			<button class="my-submit-btn" type="submit" name="submit" onclick="openFakeThankYou()">Submit</button>
+		</div>
+		<div id="fake-thank-you">Thank you for submitting!</div>
+	</div>
+	<div id="close-lightbox" onclick="closeContact()"></div>
+</div>
+
+
+<script rel="text/javascript" src="scripts/script.js"></script>
+<script>
+
+function moveCover1(){
+	var position = -333;
+	var interval = setInterval(frame, 5);
+	var element = document.getElementById('home-cover1');
+
+	function frame(){
+		if(position == 0){
+			clearInterval(interval);
+		} 
+		else {
+			position++;
+			element.style.left = position + "px";
+		} 
+
+	}
+}
+
+function moveCover2(){
+	var position = -183;
+	var interval = setInterval(frame, 5);
+	var element = document.getElementById('home-cover2');
+
+	function frame(){
+		if(position == 150){
+			clearInterval(interval);
+		} 
+		else {
+			position++;
+			element.style.bottom = position + "px";
+		} 
+
+	}
+}
+
+function moveCover3(){
+	var position = 999;
+	var interval = setInterval(frame, 5);
+	var element = document.getElementById('home-cover3');
+
+	function frame(){
+		if(position == 666){
+			clearInterval(interval);
+		} 
+		else {
+			position--;
+			element.style.left = position + "px";
+		} 
+
+	}
+}
+
+
+moveCover1();
+moveCover2();
+moveCover3();
+
+</script>
+
+</body>
+</html>

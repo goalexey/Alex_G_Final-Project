@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<link type="text/css" rel="stylesheet" href="styles/main.css">
+<style>
+
+
+body {
+	background: black;
+	margin: 0 auto;
+	color: black;
+}
+
+p {
+	color: black;
+}
+
+
+h1 {
+	font-family: Individigital Demibold;
+	text-shadow: 3px 5px 10px;
+	color: black;
+}
+
+h2{
+	font-family: Individigital Demibold;
+	text-shadow: 3px 5px 10px;
+	color: black;
+}
+
+h3{
+	font-family: "Audiowide-Regular";
+	color: black;
+}
+
+
+#page-container{
+	opacity: 1;
+	transition: 1s;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 40px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.fullscreen-bg__video {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div id="page-container">
+	<!-- NAV MENU -->
+	<nav>
+	<div><a href="index.html">HOME</a></div>
+	<div><a href="clarinet.html">CLARINET</a></div>
+	<div><a href="audio-engineering.html">AUDIO ENGINEERING</a></div>
+	<div><a href="electronic-music.html">ELECTRONIC MUSIC</a></div>
+	<div id="contact-nav"><a onclick="openContact()">CONTACT</a></div>
+	</nav>
+
+	<!-- LOGO -->
+	<div class="header">
+	Alexey Gorokholinsky
+	</div>
+
+	<!-- VIDEO -->
+	<div class="fullscreen-bg">
+	    <video autoplay loop class="fullscreen-bg__video">
+	        <source src="videos/electronic_music_background_720.mov" type="video/webm">
+		</video>
+	</div>
+
+	
+	<div class="container-dark-offset">
+		<!-- PAGE NAV LINKS -->
+		<div class="nav-img-menu flex-justify-around center">
+			<div>
+				<h1>RELEASES</h1>
+				<a href="#electronic-releases"><img src="images/electronic_releases(w370_h258).png" title="releases"></a>
+			</div>
+			<div>
+				<h1>PROJECTS</h1>
+				<a href="#projects"><img src="images/electronic_projects(w370_h258).png" title="projects"></a>
+			</div>
+			<div>
+				<h1>MIXES</h1>
+				<a href="#mixes"><img src="images/electronic_mixes.jpg" title="mixes"></a>
+			</div>
+		</div>
+		<div class="hr"></div>
+		<p>The man behind Kronodigger - Alexey G, is a classically trained clarinetist,
+          composer and audio engineer. Being highly influenced by electronic music
+          since age 10, Alexey creates new works with a type of sound that never
+          stays in one place. Driven by wild imagination, Kronodigger presents music
+          with lots of sound design, sampling, automation and unexpected twists and turns.
+          Kronodigger has no age restrictions, contraindications or side effects!</p>
+
+         <!-- GALLERY -->
+
+         <div class="gallery-container">
+         	<div class="wrap-one-third" onclick="openLightbox(), current(1)">
+         		<img src="images/krono/mini_krono.sidra02.w250h200.jpg">
+         	</div>
+         	<div class="wrap-one-third" onclick="openLightbox(), current(2)">
+         		<img src="images/krono/mini_krono.sidra03.w250h200.jpg">
+         	</div>
+         	<div class="wrap-one-third" onclick="openLightbox(), current(3)">
+         		<img src="images/krono/mini_krono.sidra04_w250h200.jpg">
+         	</div>
+         	<div class="wrap-one-third" onclick="openLightbox(), current(4)">
+         		<img src="images/krono/mini_lostlanguage08_w250h200.jpg">
+         	</div>
+         	<div class="wrap-one-third" onclick="openLightbox(), current(5)">
+         		<img src="images/krono/mini_djmixer1_w250h200.jpg">
+         	</div>
+         	<div class="wrap-one-third" onclick="openLightbox(), current(6)">
+         		<img src="images/krono/mini_profile2_w250h200.jpg">
+         	</div>
+         	<div class="wrap-one-third" onclick="openLightbox(), current(7)">
+         		<img src="images/krono/mini_pianos_w250h200.jpg">
+         	</div>
+         	<div class="wrap-one-third" onclick="openLightbox(), current(8)">
+         		<img src="images/krono/mini_kronopink_w250h200.jpg">
+         	</div>
+         	<div class="wrap-one-third" onclick="openLightbox(), current(9)">
+         		<img src="images/krono/mini_logoconcrete_w250h200.jpg">
+         	</div>
+         </div>
+         <div class="hr"></div>
+
+
+		<!-- RELEASES -->
+
+		<div id="electronic-releases" class="center">
+			<h2>RELEASES</h2>
+		</div>
+
+		<div class="flex-justify-around center">
+			
+			<div>
+				<h3>TROP<br>(2017)</h3>
+				<a href="https://buyencryptedaudio.bandcamp.com/album/enclp001-trop" target="_blank"><img src="images/trop_cover_w200h200.jpg" title="trop-album"></a>
+			</div>
+			<div>
+				<h3>ENC015<br>(2016)</h3>
+				<a href="https://buyencryptedaudio.bandcamp.com/album/kronodigger-enc015" target="_blank"><img src="images/enc015-cover-w200h200.png" title="enc015-album"></a>
+			</div>
+			<div>
+				<h3>SUBLIMINAL DESIGN<br>(2015)</h3>
+				<a href="https://kronodigger.bandcamp.com/releases" target="_blank"><img src="images/subliminal-design-cover-w200h200.png" title="subliminal-design-album"></a>
+			</div>
+		</div>
+		<div class="hr"></div>
+		<div class="center">
+			<h2>FREE TRACKS</h2>
+		</div>
+		<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/292506123&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+		<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/263224292&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+		<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/230692610&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+		<div class="hr"></div>
+
+		
+		<!-- PROJECTS -->
+		
+		<div id="projects" class="center">
+			<h2>SPECIAL PROJECTS</h2>
+		</div>
+		<div class="center">
+			Collaboration with award winning and critically acclaimed dance company <a target="_blank" href="http://www.sidrabelldanceny.org/"><strong>Sidra Bell Dance New York</strong></a><br>
+			Full video of the show <strong>"LOST LANGUAGE"</strong> recorded during live performance at Baruch Performing Arts Center on June 5th, 2016.<br>
+	        Choreography/Concept - <strong>Sidra Bell</strong><br>
+	        Music/Live Performance - <strong>Alexey Gorokholinsky</strong>
+		</div>
+		<br>
+		<br>
+		<div class="center">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/5wvfoMXPONA" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<br>
+		<div class="hr"></div>
+
+		<!-- MIXES -->
+
+		<div id="mixes" class="center">
+			<h2>MIXES</h2>
+		</div>
+		<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/295642080&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/290861614&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/289935217&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+        <div class="center border500">
+        	<iframe width="490" height="276" src="https://www.youtube.com/embed/uKofxb8pAds?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="center border500">
+        	<iframe width="490" height="276" src="https://www.youtube.com/embed/VBOKC6fNa38?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="center border500">
+        	<iframe width="490" height="276" src="https://www.youtube.com/embed/KX6s3V3v7Yk?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+	</div>
+
+	
+
+</div>
+
+<div id="open-lightbox" class="lightbox">
+	<a class="gal-btn" onclick="plusDivs(-1)">&#10094</a>
+	<div class="lightbox-window">
+		<img class="gallery-img" src="images/krono/krono-sidra02-w1920h1280.jpg" title="">
+		<img class="gallery-img" src="images/krono/krono-sidra03-w1920h1280.jpg" title="">
+		<img class="gallery-img" src="images/krono/krono.sidra04_w2500h1656.jpg" title="">
+		<img class="gallery-img" src="images/krono/lostlanguage08_w2500h1656.jpg" title="">
+		<img class="gallery-img" src="images/krono/djmixer1_w1553h928.png" title="">
+		<img class="gallery-img" src="images/krono/profile2_w1464h1651.jpg" title="">
+		<img class="gallery-img" src="images/krono/pianos_w1536h2048.jpg" title="">
+		<img class="gallery-img" src="images/krono/kronopink_w1920h1080.jpg" title="">
+		<img class="gallery-img" src="images/krono/logoconcrete_w1920h1080.jpg" title="">	
+	</div>
+	<div id="close-lightbox"  onclick="closeLightbox()"></div>
+	<a class="gal-btn" onclick="plusDivs(+1)">&#10095</a>
+</div>
+
+<!-- CONTACT -->
+
+<div id="contact" class="lightbox">
+	<div class="lightbox-window">
+		<div id="my-contact-form" method="post">
+			<label>Name: <span class="span-red">*</span><br>
+				<input class="input-field" type="text" name="name" placeholder="" value="">
+			</label><br><br>
+			<label>Email: <span class="span-red">*</span><br>
+				<input class="input-field" type="email" placeholder="" name="email" value="">
+			</label><br><br><br>
+			<label>Your Message Here:<br>
+				<textarea class="my-text-area"  name="message"></textarea>
+			</label>
+			<br>
+			<button class="my-submit-btn" type="submit" name="submit" onclick="openFakeThankYou()">Submit</button>
+		</div>
+		<div id="fake-thank-you">Thank you for submitting!</div>
+	</div>
+	<div id="close-lightbox" onclick="closeContact()"></div>
+</div>
+
+<script type="text/javascript" src="scripts/script.js"></script>
+<script>
+
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n){
+	showDivs(slideIndex += n);
+}
+function current(n){
+	slideIndex = n;
+	showDivs(slideIndex);
+}
+
+function showDivs(n){
+	var i;
+	var galleryArray = document.getElementsByClassName("gallery-img");
+
+	if(n > galleryArray.length){
+		slideIndex = 1;
+	}
+	if(n < 1){
+		slideIndex = galleryArray.length;
+	}
+
+	for(i = 0; i < galleryArray.length; i++){
+		galleryArray[i].style.display = "none";	
+	}
+	galleryArray[slideIndex - 1].style.display = "block";
+}
+
+
+
+
+</script>
+
+</body>
+</html>

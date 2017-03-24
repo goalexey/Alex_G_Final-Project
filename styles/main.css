@@ -1,0 +1,379 @@
+
+@import
+  "http://fonts.googleapis.com/css?family=Oswald|Orbitron|Arvo|Lato|Vollkorn|Ubuntu|Josefin Slab|Open Sans"; 
+
+ @font-face {
+ 	font-family: 'Audiowide-Regular';
+  	src: url('../fonts/Audiowide-Regular.ttf');
+ }
+
+ @font-face {
+ 	font-family: 'Individigital Demibold';
+  	src: url('../fonts/Individigital Demibold.ttf');
+ }
+
+ @font-face {
+ 	font-family: 'moonhouse';
+  	src: url('../fonts/moonhouse.ttf');
+ }
+
+ @font-face {
+ 	font-family: 'Neoterique';
+  	src: url('../fonts/Neoterique.ttf');
+ }
+
+body{
+	font-family: "Open Sans";
+	background-color: black;
+} 
+
+nav {
+	height: 40px;
+	background-color: black;
+	position: fixed;
+	left: 0; top: 0; right: 0;
+	color: red;
+	display: flex;
+	justify-content: flex-end;
+	z-index: 1;
+	font-family: "Orbitron";
+	font-size: 13px;
+}
+nav div {
+	padding: 13px 0;
+}
+
+nav a {
+	text-decoration: none;
+	color: red;
+	padding: 14px 10px;
+
+}
+
+nav a:hover{
+	color: black;
+	background-color: beige;
+}
+
+h1{
+	color: black;
+	font-size: 30px;
+}
+
+h2{
+	color: black;
+	font-size: 25px;
+}
+
+h3 {
+	color: black;
+	font-size: 18px;
+}
+
+p {
+	padding: 0 30px;
+}
+
+a{
+	text-decoration: underline;
+	color: blue;
+}
+
+a:hover{
+	color: gold;
+	cursor: pointer;
+}
+
+table {
+	text-align: center;
+	color: white;
+	margin: 30px auto 20px;
+	width: 900px;
+	border: solid white 1px;
+	font-size: 14px;
+}
+
+table a{
+	color: gold;
+}
+
+table a:hover{
+	color: beige;
+}
+
+th {
+	background-color: grey;
+	height: 40px;
+
+}
+
+tr {
+
+}
+
+td {
+	background-color: rgba(0,0,0,.8);
+	border: solid white 1px;
+	width: 200px;
+}
+
+td img{
+	width: 120px;
+	opacity: 1;
+}
+
+td img:hover{
+	opacity: .7;
+	transition: .4s;
+}
+
+td p{
+	margin: 0;
+}
+
+.nav-img-menu img{
+	width: 300px;
+	margin: 5px; border: 
+	solid white 1px; 
+	border-radius: 6px; 
+	border: solid black 2px;
+	opacity: 1;
+}
+.nav-img-menu img:hover{
+	opacity: .7;
+	transition: .4s;
+}
+
+#contact-nav{
+	cursor: pointer;
+}
+
+.header {
+	position: fixed;
+	left: 0; bottom: 0; right: 0;
+	height: 40px;
+	background-color: rgba(0,0,0,.8);
+	text-align: center;
+	padding-top: 10px;
+	color: red;
+	text-shadow: 2px 5px 15px;
+	font-size: 30px;
+	font-family: impact;
+	z-index: 1;
+}
+
+.flex-justify-around{
+	display: flex;
+	justify-content: space-around;
+}
+
+.flex-justify-between{
+	display: flex;
+	justify-content: space-between;
+}
+
+.wrap-one-third{
+	display: inline-block;
+	text-align: center;
+	padding: 20px;
+}
+
+.wrap-one-third img{
+	width: 200px;
+}
+
+.container-light{
+	padding: 40px 0;
+	margin: 0 auto;
+	width: 1100px;
+	background-color: rgba(242,242,242,.9);
+}
+
+.container-light-offset{
+	margin: 580px auto 0;
+	width: 1100px;
+	background-color: rgba(242,242,242,.9);
+}
+
+.container-dark{
+	padding: 40px 0;
+	margin: 60px auto;
+	width: 1100px;
+	background: #8e9eab; /* fallback for old browsers */
+	background: -webkit-radial-gradient(circle, #8e9eab 1%, #eef2f3) no-repeat center center fixed; /* Chrome 10-25, Safari 5.1-6 */
+	background: radial-gradient(circle, #8e9eab 1% , #eef2f3) no-repeat center center fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	border: solid black 1px;
+	border-radius: 5px;
+}
+
+.container-dark-ae{
+	margin: 20px auto;
+	width: 1100px;
+	background: #8e9eab; /* fallback for old browsers */
+	background: -webkit-radial-gradient(circle, #8e9eab 1%, #eef2f3) no-repeat center center fixed; /* Chrome 10-25, Safari 5.1-6 */
+	background: radial-gradient(circle, #8e9eab 1% , #eef2f3) no-repeat center center fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	border: solid black 1px;
+	border-radius: 5px;
+}
+
+.container-dark-offset{
+	margin: 580px auto 0;
+	width: 1100px;
+	background: #8e9eab; /* fallback for old browsers */
+	background: -webkit-radial-gradient(circle, #8e9eab 1%, #eef2f3) no-repeat center center fixed; /* Chrome 10-25, Safari 5.1-6 */
+	background: radial-gradient(circle, #8e9eab 1% , #eef2f3) no-repeat center center fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.hr{
+	margin: 30px 0 30px 0;
+	height: 2px;
+	background-color: grey;
+}
+
+.center {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.gallery-container{
+	margin: 0 auto;
+	width: 900px;
+	background-color: rgba(0,0,0,.3);
+	text-align: center;
+}
+
+.gallery-container img{
+	cursor: pointer;
+	transform: scale(1,1);
+	border: solid beige 1px;
+}
+
+.gallery-container img:hover{
+	transform: scale(1.1,1.1);
+	border: solid red 1px;
+	transition: .4s;
+}
+
+.gal-btn{
+	background-color: rgba(255,255,255,.3);
+	padding: 60px 30px;
+	margin: 0 80px;
+	cursor: pointer;
+	color: white;
+	font-size: 80px;
+	font-family: Arial;
+	opacity: .7;
+	z-index: 100;
+}
+
+.gal-btn:hover{
+	opacity: 1;
+	text-shadow: 2px 5px 20px;
+}
+
+
+.gallery-img{
+	width: 600px;
+}
+
+
+.lightbox {
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-color: rgba(0,0,0,.9);
+	opacity: 0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 5;
+}
+
+.lightbox-window{
+	text-align: center;
+	width: 600px;
+	position: relative;
+	margin: 20% auto;
+	padding: 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+	box-shadow: 10px 10px 20px;
+	z-index: 10;
+}
+
+#close-lightbox{
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: 0;
+}
+
+.border500 {
+	color: white;
+	width: 500px;
+	margin: 30px auto;
+	background: #000000; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #000000 , #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 4px 5px 10px;
+}
+
+#my-contact-form{
+	height: 500px;
+	width: 600px;
+	border: solid black 1px;
+}
+
+.input-field {
+  font-size: 14px;
+  width: 250px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+
+.my-text-area {
+  width: 500px;
+  height: 250px;
+  resize: none;
+  font-size: 14px;
+}
+
+.my-submit-btn {
+  text-align: center;
+  background-color: #e6ecf7;
+  width: 100px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 7px;
+  transition: all 0.5s ease-in;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: Arial;
+}
+
+.my-submit-btn:hover {
+  background-color: grey;
+  color: white;
+}
+
+.span-red {
+  color: red;
+}
+
+#fake-thank-you{
+	margin: 60px auto;
+	color: black;
+	display: none;
+
+}
+
+
+
