@@ -3,177 +3,56 @@
 <head>
 	<title>Audio-Engineering Page of Alexey Gorokholinsky</title>
 <link rel="stylesheet" type="text/css" href="styles/main.css">
-<style>
-body{
-	height: 100%;
-	background-color: rgb(242,242,242);
-} 
+<link rel="stylesheet" type="text/css" href="styles/ae.css">
 
-html{
-	height: 100%;
-}
-
-h1{
-	font-family: "Audiowide-Regular";
-	font-size: 20px;
-}
-
-h2 {
-
-}
-
-p{
-	font-size: 18px;
-	line-height: 26px;
-}
-
-table p{
-	font-size: 15px;
-	line-height: 20px;
-}
-
-
-
-.parallax1{
-    background-image: url("images/ae/frontcover01_w2600h1734.jpg");
-    height: 80%; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.parallax2{
-	position: relative;
-    background-image: url("images/ae/mastering_portfolio_w1200h800.png");
-    height: 70%; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;   
-}
-
-.parallax3{
-	position: relative;
-    background-image: url("images/ae/videostreaming02_w2600h1950.jpg");
-    height: 70%; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;   
-}
-
-.parallax4{
-	position: relative;
-    background-image: url("images/ae/yamahabooth_w2600h1892.jpg");
-    height: 70%; 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;   
-}
-
-.page-text-box{
-	left: 50%; 
-	top: 50%;
-	margin: -100px -150px;
-	position: absolute;
-	padding: 40px 0;
-	width: 300px;
-	height: 40px;
-	background: rgb(0,0,0);
-	border: solid white 2px;
-	color: white;
-	text-align: center;
-	font-family: "Orbitron";
-	font-size: 20px;
-	font-weight: bold;
-	letter-spacing: 3px;
-	line-height: 25px;
-}
-
-.mastering-text-box{
-	left: 50%; 
-	top: 50%;
-	margin: -20px -150px;
-	position: absolute;
-	padding: 40px 0;
-	width: 300px;
-	height: 40px;
-	background: rgb(0,0,0);
-	border: solid white 2px;
-	color: white;
-	text-align: center;
-	font-family: "Orbitron";
-	font-size: 20px;
-	font-weight: bold;
-	letter-spacing: 3px;
-	line-height: 25px;
-}
-
-.videoservices-text-box{
-	left: 50%; 
-	top: 50%;
-	margin: -20px -150px;
-	position: absolute;
-	padding: 40px 0;
-	width: 300px;
-	height: 40px;
-	background: rgb(0,0,0);
-	border: solid white 2px;
-	color: white;
-	text-align: center;
-	font-family: "Orbitron";
-	font-size: 20px;
-	font-weight: bold;
-	letter-spacing: 3px;
-	line-height: 25px;
-}
-
-.gear-text-box{
-	left: 50%; top: 50%;
-	margin: -20px -150px;
-	position: absolute;
-	padding: 40px 0;
-	width: 300px;
-	height: 40px;
-	background: rgb(0,0,0);
-	border: solid white 2px;
-	color: white;
-	text-align: center;
-	font-family: "Orbitron";
-	font-size: 20px;
-	font-weight: bold;
-	letter-spacing: 3px;
-	line-height: 25px;
-}
-
-
-
-</style>
 </head>
 <body>
-	<nav>
-		<div><a href="index.html">HOME</a></div>
-		<div><a href="clarinet.html">CLARINET</a></div>
-		<div><a href="audio-engineering.html">AUDIO ENGINEERING</a></div>
-		<div><a href="electronic-music.html">ELECTRONIC MUSIC</a></div>
-		<div id="contact-nav"><a onclick="openContact()">CONTACT</a></div>
-	</nav>
-
-	<div class="header">
-	Alexey Gorokholinsky
+	
+	<!--HEADER SECTION-->
+	<header>
+        <div><a href="index.html">HOME</a></div>
+        <div class="nav-clarinet"><a href="clarinet.html">CLARINET</a>
+            <!--drop-down menu-->
+            <ul class="clarinet-drop">
+                <li><a href="clarinet-electronic.html">Electronic Clarinetist</a></li>
+                <li><a href="clarinet-discography.html">Discography</a></li>
+                <li><a href="clarinet-tutorials.html">Tutorial Videos</a></li>
+            </ul>
+        </div>
+        <div><a href="audio-engineering.html">AUDIO ENGINEERING</a></div>
+        <div class="nav-electronic"><a href="#">ELECTRONIC MUSIC</a>
+            <!--drop-down menu-->
+            <ul class="electronic-drop">
+                <li><a href="electronic-releases.html">Music Releases</a></li>
+                <li><a href="electronic-projects.html">Special Projects</a></li>
+                <li><a href="electronic-mixes.html">Mixes</a></li>
+            </ul>
+        </div>
+        <div id="contact-nav"><a onclick="openContact()">CONTACT</a></div>
+	</header>
+    
+    <!--MOBILE HEADER-->
+	<div class="mob-header">
+	    <div class="mob-logo">Alexey Gorokholinsky</div>
+        <div class="hamburger">
+            <div class="ham1"></div>
+            <div class="ham2"></div>
+            <div class="ham3"></div>
+        </div>
 	</div>
+    <!--mobile nav menu-->
+    <div class="mob-nav-menu">
+        <a href="index.html"><div class="mob-nav-link">HOME</div></a>
+        <a href="clarinet.html"><div class="mob-nav-link">CLARINET</div></a>
+        <a href="audio-engineering.html"><div class="mob-nav-link">AUDIO ENGINEERING</div></a>
+        <a href="electronic-music.html"><div class="mob-nav-link">ELECTRONIC MUSIC</div></a>
+        <a onclick="openContact()"><div class="mob-nav-link">CONTACT</div></a>
+    </div>
 
-	<!-- PARALLAX1 -->
-
-	<div class="parallax1">
-		<div class="page-text-box">Audio Engineering/<br>Video Production</div>
-	</div>
 
 <!-- 	IMG and ABOUT -->
 	<div class="container-dark-ae">
-		<div class="flex-justify-around">
+		<div class="ae-about">
 			<img src="images/ae/audio_engineering_cover(w600_h558).jpg" alt="">
 			<div>
 				<p>Alexey Gorokholinsky has been working in the sphere of audio engineering
@@ -216,13 +95,13 @@ table p{
 	<!-- PARALLAX 2 -->
 
 	<div id="mastering-portfolio" class="parallax2">
-		<div class="mastering-text-box">Mastering Portfolio</div>
+		<div class="parallax-textbox">Mastering Portfolio</div>
 	</div>
 
 	<!-- MASTERING PORTFOLIO -->
 
 	<div class="container-dark-ae">
-		<table>
+		<table class="mastering-table">
     		<tr>
     			<th>ALBUM COVER</th>
     			<th>ARTIST</th>
@@ -728,13 +607,13 @@ table p{
     <!-- PARALLAX 3 -->
 
 	<div id="video-production" class="parallax3">
-		<div class="videoservices-text-box">Video Production</div>
+		<div class="parallax-textbox">Video Production</div>
 	</div>
 
     <!-- VIDEO PRODUCTION -->
 
 	<div class="container-dark-ae">
-		<div class="flex-justify-around video-production-div">
+		<div class="video-production-div">
 			<img src="images/ae/popovmedia_w600h396.jpg" alt="">
 			<div>
 				<p>For years, Alexey has been working as part of video production company PopovMedia. The company provides highest quality video recording, streaming, post production, and promo video creation. It has worked with such organizations as Jazz at Lincoln Center, Metropolitan Opera, The Juilliard School, Martha Graham Company, Opera America, Alvin Ailey, Sidra Bell Dance New York, and many other arts related organizations.
@@ -747,7 +626,7 @@ table p{
     <!-- PARALLAX 4 -->
 
 	<div id="gear" class="parallax4">
-		<div class="gear-text-box">Gear</div>
+		<div class="parallax-textbox">Gear</div>
 	</div>
 
     <!-- GEAR -->
@@ -771,27 +650,22 @@ table p{
 	<br>
 	<br>
 
-<!-- CONTACT -->
+	<!-- CONTACT -->
 
-<div id="contact" class="lightbox">
-	<div class="lightbox-window">
-		<div id="my-contact-form" method="post">
-			<label>Name: <span class="span-red">*</span><br>
-				<input class="input-field" type="text" name="name" placeholder="" value="">
-			</label><br><br>
-			<label>Email: <span class="span-red">*</span><br>
-				<input class="input-field" type="email" placeholder="" name="email" value="">
-			</label><br><br><br>
-			<label>Your Message Here:<br>
-				<textarea class="my-text-area"  name="message"></textarea>
-			</label>
-			<br>
-			<button class="my-submit-btn" type="submit" name="submit" onclick="openFakeThankYou()">Submit</button>
+	<div id="contact" class="lightbox">
+		<div class="close" onclick="closeContact()">X</div>
+		<div class="lightbox-window"> 
+			<div id="contact-inside">
+				<div>Email:</div>
+				<div>goalexey@gmail.com</div>
+				<div id="soc-media-div">
+					<a href="http://facebook.com/goalexey" target="_blank"><img src="images/1498608190_facebook.svg" /></a>
+					<a href="http://soundcloud.com/kronodigger" target="_blank"><img src="images/if_soundcloud_1233005.svg" /></a>
+				</div>
+			</div>
 		</div>
-		<div id="fake-thank-you">Thank you for submitting!</div>
+		<div id="close-lightbox" onclick="closeContact()"></div>
 	</div>
-	<div id="close-lightbox" onclick="closeContact()"></div>
-</div>
 
 <script type="text/javascript" src="scripts/script.js"></script>
 

@@ -1,0 +1,263 @@
+/*HOMEPAGE CSS*/
+
+body {
+	margin: 0;
+	background: #8e9eab; 
+	background: -webkit-radial-gradient(circle, #8e9eab 1%, #eef2f3) no-repeat center center fixed; 
+	background: radial-gradient(circle, #8e9eab 1% , #eef2f3) no-repeat center center fixed; 
+}
+
+/*main homepage section wrapper*/
+.home-img{
+    box-sizing: border-box;
+    position: relative;
+	margin: 120px auto 0;
+	width: 1000px;
+	height: 500px;
+	border: solid white 1px;
+	overflow: hidden;
+    box-shadow: 0 0 15px 3px;
+}
+
+/*image for main section*/
+.home-img img{
+	position: absolute;
+	width: 1000px;
+}
+
+/*section with link and nav button*/
+#home-cover1{
+    box-sizing: border-box;
+	position: absolute;
+	width: 33.333333%;
+	height: 200px;
+	background-color: rgba(0,0,0,.8);
+	bottom: 150px; left: -333px;
+}
+
+/*section with link and nav button*/
+#home-cover2{
+    box-sizing: border-box;
+	position: absolute;
+	width: 33.333333%;
+	height: 200px;
+	background-color: rgba(0,0,0,.8);
+	bottom: -210px;
+    left: 332.5px;
+}
+
+/*section with link and nav button*/
+#home-cover3{
+    box-sizing: border-box;
+	position: absolute;
+	width: 33.333333%;
+	height: 200px;
+	background-color: rgba(0,0,0,.8);
+	right: -333px;
+    bottom: 150px;
+}
+
+/*nav button inside cover*/
+.home-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 180px;
+	height: 40px;
+	background-color: rgba(0,0,0,.9);
+	border: solid white 1px;
+	border-radius: 5px;
+    font-family: Arial;
+	font-size: 14px;
+	text-align: center;
+	color: beige;
+}
+
+.home-btn:hover{
+	color: black;
+	background-color: beige;
+	transition: .4s;
+}
+
+.home-btn a{
+	color: white;
+	text-decoration: none;
+}
+
+
+.home-description{
+	color: white;
+	font-size: 15px;
+	font-family: sans-serif;
+    font-weight: 100;
+    letter-spacing: 2px;
+	text-align: center;
+    margin-top: 10px;
+}
+
+.home-footer{
+	margin: 0px auto;
+	width: 1000px;
+	height: 20px;
+	background-color: black;
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	padding-top: 8px;
+}
+
+#home-btn1 {
+  animation-duration: 1.5s;
+  animation-name: homebtnborder;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#home-btn2 {
+  animation-duration: 2.5s;
+  animation-name: homebtnborder;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#home-btn3 {
+  animation-duration: 2s;
+  animation-name: homebtnborder;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/*ANIMATION*/
+
+@keyframes homebtnborder {
+  from {
+    border-color: white;
+  }
+
+  to {
+    border-color: grey;
+  }
+}
+
+@keyframes homecover1-move{
+    from{
+        left: -333px;
+    }
+    to{
+       left:  0;
+    }
+}
+
+@keyframes homecover2-move{
+    from{
+        bottom: -210px;
+    }
+    to{
+       bottom:  150px;
+    }
+}
+
+@keyframes homecover3-move{
+    from{
+        right: -333px;
+    }
+    to{
+       right:  0;
+    }
+}
+
+@media (max-width: 1000px){
+    .home-img{
+        margin-top: 160px;
+        width: 750px;
+        height: 375px;
+    }
+    
+    .home-img img{
+        width: 750px;
+    }
+    
+    #home-cover1{
+        animation: none !important;
+        width: 250px;
+        left: 0;
+        bottom: 80px;
+    }
+    
+    #home-cover2{
+        animation: none !important;
+        width: 250px;
+        left: 250px;
+        bottom: 80px;
+    }
+    
+    #home-cover3{
+        animation: none !important;
+        width: 250px;
+        right: 0;
+        bottom: 80px;
+    }
+    
+    .home-btn{
+        width: 120px;
+        left: 76px; top: 35px; 
+        font-size: 11px;
+        text-align: center;
+        color: beige;
+    }
+    .home-description{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 760px){
+    
+    body{
+        background: url('../images/mobilebackground02.jpg') no-repeat center center fixed;
+        /*background-size: cover;*/
+    }
+    
+    header{
+        display: none;
+    }
+    
+    .home-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap;
+        margin-top: 80px;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        border: none;
+        box-shadow: none;
+    }
+    
+    .home-img img{
+        width: 100%;
+        display: none;
+    }
+    
+    #home-cover1, #home-cover2, #home-cover3{
+        position: static;
+        width: 100%;
+        background-color: transparent;
+    }
+    
+    .home-btn{
+        width: 200px;
+        height: 60px;
+        font-size: 13px;
+    }
+    
+    #home-btn1, #home-btn2, #home-btn3{
+        animation: none;
+    }
+    
+    .home-description{
+        font-size: 14px;
+        margin-top: 25px;
+    }
+    
+}

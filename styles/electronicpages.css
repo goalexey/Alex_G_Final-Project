@@ -1,0 +1,33 @@
+body {
+	background: black;
+	margin: 0 auto;
+	color: black;
+}
+
+p {
+	color: black;
+}
+
+
+h1 {
+	font-family: Individigital Demibold;
+	text-shadow: 3px 5px 10px;
+	color: black;
+}
+
+h2{
+	font-family: Individigital Demibold;
+	text-shadow: 3px 5px 10px;
+	color: black;
+}
+
+h3{
+	font-family: "Audiowide-Regular";
+	color: black;
+}
+
+
+#page-container{
+	opacity: 1;
+	transition: 1s;
+}

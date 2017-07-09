@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kronodigger Releases</title>
+<link type="text/css" rel="stylesheet" href="styles/main.css">
+<link type="text/css" rel="stylesheet" href="styles/electronicpages.css">
+</head>
+<body>
+    
+    
+    <!--HEADER SECTION-->
+	<header>
+        <div><a href="index.html">HOME</a></div>
+        <div class="nav-clarinet"><a href="clarinet.html">CLARINET</a>
+            <!--drop-down menu-->
+            <ul class="clarinet-drop">
+                <li><a href="clarinet-electronic.html">Electronic Clarinetist</a></li>
+                <li><a href="clarinet-discography.html">Discography</a></li>
+                <li><a href="clarinet-tutorials.html">Tutorial Videos</a></li>
+            </ul>
+        </div>
+        <div><a href="audio-engineering.html">AUDIO ENGINEERING</a></div>
+        <div class="nav-electronic"><a href="electronic-music.html">ELECTRONIC MUSIC</a>
+            <!--drop-down menu-->
+            <ul class="electronic-drop">
+                <li><a href="#">Music Releases</a></li>
+                <li><a href="electronic-projects.html">Special Projects</a></li>
+                <li><a href="electronic-mixes.html">Mixes</a></li>
+            </ul>
+        </div>
+        <div id="contact-nav"><a onclick="openContact()">CONTACT</a></div>
+	</header>
+    
+    <!--MOBILE HEADER-->
+	<div class="mob-header">
+	    <div class="mob-logo">Alexey Gorokholinsky</div>
+        <div class="hamburger">
+            <div class="ham1"></div>
+            <div class="ham2"></div>
+            <div class="ham3"></div>
+        </div>
+	</div>
+    <!--mobile nav menu-->
+    <div class="mob-nav-menu">
+        <a href="index.html"><div class="mob-nav-link">HOME</div></a>
+        <a href="clarinet.html"><div class="mob-nav-link">CLARINET</div></a>
+        <a href="audio-engineering.html"><div class="mob-nav-link">AUDIO ENGINEERING</div></a>
+        <a href="electronic-music.html"><div class="mob-nav-link">ELECTRONIC MUSIC</div></a>
+        <a onclick="openContact()"><div class="mob-nav-link">CONTACT</div></a>
+    </div>
+    
+    
+    <!-- RELEASES -->
+    
+    <div class="container-dark">
+		<div id="electronic-releases" class="center">
+			<h2>RELEASES</h2>
+		</div>
+
+		<div class="gallery-container">
+			
+			<div>
+				<h3>TROP<br>(2017)</h3>
+				<a href="https://buyencryptedaudio.bandcamp.com/album/enclp001-trop" target="_blank"><img src="images/trop_cover_w200h200.jpg" title="trop-album"></a>
+			</div>
+			<div>
+				<h3>ENC015<br>(2016)</h3>
+				<a href="https://buyencryptedaudio.bandcamp.com/album/kronodigger-enc015" target="_blank"><img src="images/enc015-cover-w200h200.png" title="enc015-album"></a>
+			</div>
+			<div>
+				<h3>SUBLIMINAL DESIGN<br>(2015)</h3>
+				<a href="https://kronodigger.bandcamp.com/releases" target="_blank"><img src="images/subliminal-design-cover-w200h200.png" title="subliminal-design-album"></a>
+			</div>
+		</div>
+		<div class="hr"></div>
+		<div class="center">
+			<h2>FREE TRACKS</h2>
+		</div>
+		<iframe class="audio-frame" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/292506123&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+		<iframe class="audio-frame" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/263224292&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+		<iframe class="audio-frame" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/230692610&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+		<div class="hr"></div>
+    </div>
+    
+    <!-- CONTACT -->
+
+    <div id="contact" class="lightbox">
+        <div class="close" onclick="closeContact()">X</div>
+        <div class="lightbox-window"> 
+            <div id="contact-inside">
+                <div>Email:</div>
+                <div>goalexey@gmail.com</div>
+                <div id="soc-media-div">
+                    <a href="http://facebook.com/goalexey" target="_blank"><img src="images/1498608190_facebook.svg" /></a>
+                    <a href="http://soundcloud.com/kronodigger" target="_blank"><img src="images/if_soundcloud_1233005.svg" /></a>
+                </div>
+            </div>
+        </div>
+        <div id="close-lightbox" onclick="closeContact()"></div>
+    </div>
+    
+    <script type="text/javascript" src="scripts/script.js"></script>
+</body>
+</html>

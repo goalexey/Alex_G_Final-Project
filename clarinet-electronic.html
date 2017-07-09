@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Electronic Clarinetist - Alexey Gorokholinsky</title>
+<link type="text/css" rel="stylesheet" href="styles/main.css" />
+<link type="text/css" rel="stylesheet" href="styles/clarinetpages.css" />
+<script type="text/javascript" src="scripts/script.js"></script>
+
+</head>
+<body>
+
+<div id="page-container">
+    
+    <!--HEADER SECTION-->
+	<header>
+        <div><a href="index.html">HOME</a></div>
+        <div class="nav-clarinet"><a href="clarinet.html">CLARINET</a>
+            <!--drop-down menu-->
+            <ul class="clarinet-drop">
+                <li><a href="#">Electronic Clarinetist</a></li>
+                <li><a href="clarinet-discography.html">Discography</a></li>
+                <li><a href="clarinet-tutorials.html">Tutorial Videos</a></li>
+            </ul>
+        </div>
+        <div><a href="audio-engineering.html">AUDIO ENGINEERING</a></div>
+        <div class="nav-electronic"><a href="electronic-music.html">ELECTRONIC MUSIC</a>
+            <!--drop-down menu-->
+            <ul class="electronic-drop">
+                <li><a href="electronic-releases.html">Music Releases</a></li>
+                <li><a href="special-projects.html">Special Projects</a></li>
+                <li><a href="electronic-mixes.html">Mixes</a></li>
+            </ul>
+        </div>
+        <div id="contact-nav"><a onclick="openContact()">CONTACT</a></div>
+	</header>
+    
+    <!--MOBILE HEADER-->
+	<div class="mob-header">
+	    <div class="mob-logo">Alexey Gorokholinsky</div>
+        <div class="hamburger">
+            <div class="ham1"></div>
+            <div class="ham2"></div>
+            <div class="ham3"></div>
+        </div>
+	</div>
+    <!--mobile nav menu-->
+    <div class="mob-nav-menu">
+        <a href="index.html"><div class="mob-nav-link">HOME</div></a>
+        <a href="clarinet.html"><div class="mob-nav-link">CLARINET</div></a>
+        <a href="audio-engineering.html"><div class="mob-nav-link">AUDIO ENGINEERING</div></a>
+        <a href="electronic-music.html"><div class="mob-nav-link">ELECTRONIC MUSIC</div></a>
+        <a onclick="openContact()"><div class="mob-nav-link">CONTACT</div></a>
+    </div>
+
+
+
+<!-- ELECTRONIC CLARINET SECTION -->
+	
+
+    <div id="electronic-clarinetist" class="container-dark">
+    	<div class="center">
+        	<h1>Electronic Clarinet</h1>
+      	</div>
+      	<p>Alexey has been working for years on composing dance-oriented and creative electronic music with virtuosic clarinet lines. He creates absolutely cool new repertoire for 21st century clarinetists and presents a full recital program of compositions for clarinet and electronics that take its influence from such established genres of electronic music as UK Dubstep, Drum &amp; Bass, Techno, Ambient, IDM, Experimental, Traditional, and many other classified and unclassified soundscapes.</p><br>
+      	<div class="center">
+        	<h3>Photo Gallery</h3>
+      	</div>
+          
+        <!--GALLERY-->
+
+      	<div class="gallery-container">
+            <div onclick="openLightbox(), current(1)">
+                <img src="images/clarinet/mini_electronictable_w250h200.jpg">
+            </div>
+            <div onclick="openLightbox(), current(2)">
+                <img src="images/clarinet/mini_Electronic.Clarinetist.01_w250h200.jpg">
+            </div>
+            <div onclick="openLightbox(), current(3)">
+                <img src="images/clarinet/mini_MG_4544_w250h200.jpg">
+            </div>
+            <div onclick="openLightbox(), current(4)">
+                <img src="images/clarinet/mini_gherman02_w250h200.jpg">
+            </div>
+            <div onclick="openLightbox(), current(5)">
+                <img src="images/clarinet/mini-kronodigger6.jpg">
+            </div>
+            <div onclick="openLightbox(), current(6)">
+                <img src="images/clarinet/mini_Electronic.Clarinetist.02_w250h200.jpg">
+            </div>
+            <div onclick="openLightbox(), current(7)">
+                <img src="images/clarinet/mini-kronodigger2.jpg">
+            </div>
+            <div onclick="openLightbox(), current(8)">
+                <img src="images/clarinet/mini-kronodigger4.jpg">
+            </div>
+            <div onclick="openLightbox(), current(9)">
+                <img src="images/clarinet/mini-kronodigger5.jpg">
+            </div>
+        </div>
+         
+
+      	<!-- LIVE PERFORMANCE VIDEOS -->
+
+      	<div class="center">
+        	<h3>Live Performances</h3>
+      	</div>
+
+      		<div class="center video-border">
+      			<div class="video-description">
+	          	Live performance of track "Amphibian" at Sidra Bell's Dance Module in Brooklyn, NY (2017)
+	          	</div>
+	          	<iframe width="490" height="276" src="https://www.youtube.com/embed/q8PbeOyfP20?rel=0" frameborder="0" allowfullscreen></iframe>
+       		</div>
+	        <div class="center video-border">
+				<div class="video-description">Live performance of track "Into the Green" Sidra Bell's Dance Module in Brooklyn, NY (2017)</div>
+				<iframe width="490" height="276" src="https://www.youtube.com/embed/gd82iChrMPc?rel=0" frameborder="0" allowfullscreen></iframe>
+	        </div>
+      	
+      		<div class="center video-border">
+	          	<div class="video-description">Live performance of track "I Like You" at a NY Public school (2016)
+	          	</div>
+	          	<iframe width="490" height="276" src="https://www.youtube.com/embed/13iZN6oAanA" frameborder="0" allowfullscreen></iframe>
+        	</div>
+        	<div class="center video-border">
+				<div class="video-description">Live Performance of piece "Everything in Stillness" as part of the
+				1.5 hour dance show "LOSTLANGUAGE" at Baruch Performing Arts Center (2016).</div>
+	          	<iframe width="490" height="276" src="https://www.youtube.com/embed/PzDTb3TUGRE" frameborder="0" allowfullscreen></iframe>
+        	</div>
+        	
+      	</div>
+    </div>	
+</div>
+
+    <!-- GALLERY with full size images inside a modal -->
+
+    <div id="open-lightbox" class="lightbox">
+    	<a class="gal-btn" onclick="plusDivs(-1)">&#10094</a>
+        <div class="lightbox-window"> 
+            <img class="gallery-img" src="images/clarinet/electronictable_w2000h14000.jpg" alt="">
+            <img class="gallery-img" src="images/clarinet/electronic_clarinetist_01_w2560h1600.jpg" alt="">
+            <img class="gallery-img" src="images/clarinet/MG_4544_w2000h1334.jpg" alt="">
+            <img class="gallery-img" src="images/clarinet/gherman02_w2002h3000.jpg" alt="">
+            <img class="gallery-img" src="images/clarinet/Kronodigger-6.jpg" alt="">
+            <img class="gallery-img" src="images/clarinet/electronic_clarinetist02_w2560h1400.jpg" alt="">
+            <img class="gallery-img" src="images/clarinet/Kronodigger-2.jpg" alt="">
+            <img class="gallery-img" src="images/clarinet/Kronodigger-4.jpg" alt="">
+            <img class="gallery-img" src="images/clarinet/Kronodigger-5.jpg" alt="">   
+    	</div>
+        <a class="gal-btn" onclick="plusDivs(+1)">&#10095</a>
+        <div id="close-lightbox" onclick="closeLightbox()"></div>
+    </div>
+    
+    <!-- CONTACT -->
+
+    <div id="contact" class="lightbox">
+        <div class="close" onclick="closeContact()">X</div>
+        <div class="lightbox-window"> 
+            <div id="contact-inside">
+                <div>Email:</div>
+                <div>goalexey@gmail.com</div>
+                <div id="soc-media-div">
+                    <a href="http://facebook.com/goalexey" target="_blank"><img src="images/1498608190_facebook.svg" /></a>
+                    <a href="http://soundcloud.com/kronodigger" target="_blank"><img src="images/if_soundcloud_1233005.svg" /></a>
+                </div>
+            </div>
+        </div>
+        <div id="close-lightbox" onclick="closeContact()"></div>
+    </div>
+    
+<script rel="text'javascript" src="scripts/script.js"></script>
+<script rel="text/javascript" src="scripts/gallery.js"></script>
+
+
+</body>
+</html>

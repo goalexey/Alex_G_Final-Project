@@ -1,4 +1,6 @@
 
+/*FONT IMPORTS*/
+
 @import
   "http://fonts.googleapis.com/css?family=Oswald|Orbitron|Arvo|Lato|Vollkorn|Ubuntu|Josefin Slab|Open Sans"; 
 
@@ -20,44 +22,52 @@
  @font-face {
  	font-family: 'Neoterique';
   	src: url('../fonts/Neoterique.ttf');
- }
+}
+
+/*GENERAL STYLING*/
 
 body{
+	margin: 0;
+	padding: 0;
 	font-family: "Open Sans";
 	background-color: black;
+}
+
+/*fixes floats for parent element*/
+.clearfix:after{
+	visibility: hidden;
+	font-size: 0;
+	height: 0;
+	content: '';
+	display: block;
+	clear: both;
 } 
 
-nav {
-	height: 40px;
-	background-color: black;
-	position: fixed;
-	left: 0; top: 0; right: 0;
-	color: red;
+/*flex container that center items in a column direction*/
+.flex-center{
 	display: flex;
-	justify-content: flex-end;
-	z-index: 1;
-	font-family: "Orbitron";
-	font-size: 13px;
-}
-nav div {
-	padding: 13px 0;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
-nav a {
-	text-decoration: none;
-	color: red;
-	padding: 14px 10px;
-
+/*for centering objects with pre-defined width or aligning text*/
+.center {
+	margin: 0 auto;
+	text-align: center;
 }
 
-nav a:hover{
-	color: black;
-	background-color: beige;
+/*no padding and not bullet points for ul and li elements*/
+ul, li{
+	list-style: none;
+	padding-left: 0px;
 }
 
+/*usually used as the title of the page on top of the page*/
 h1{
 	color: black;
 	font-size: 30px;
+	font-family: "Orbitron";
 }
 
 h2{
@@ -75,48 +85,232 @@ p {
 }
 
 a{
-	text-decoration: underline;
+	text-decoration: none;
 	color: blue;
 }
 
 a:hover{
-	color: gold;
+	/*color: gold;*/
 	cursor: pointer;
 }
 
+
+/*HEADER*/
+
+/*header div*/
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 40px;
+	background-color: lightgrey;
+	color: red;
+	display: flex;
+	justify-content: flex-end;
+	z-index: 1;
+	font-family: "Orbitron";
+	font-size: 13px;
+}
+
+/*div wrapper for each nav menu*/
+header div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+}
+
+/*header anchor tags styling*/
+header a {
+	text-decoration: none;
+	color: red;
+	padding: 12px 10px;
+
+}
+
+/*color change for anchor tags on hover of the header div*/
+header div > a:hover{
+	color: black;
+	background-color: beige;
+}
+
+/*sets both nav menus to position relative for dropdown menus to be position absolute*/
+.nav-clarinet, .nav-electronic{
+    position: relative; 
+}
+
+/*makes clarinet dropdown menu to show by changing its height when hovering over its parent .nav-clarinet*/
+.nav-clarinet:hover > ul{
+	padding-top: 5px;
+	max-height: 160px;
+}
+
+/*makes clarinet dropdown menu to show by changing its height when hovering over its parent .nav-electronic*/
+.nav-electronic:hover > ul{
+	padding-top: 5px;
+	max-height: 160px;
+}
+
+/*clarinet and electronic dropdown menus*/
+.clarinet-drop, .electronic-drop{
+    position: absolute;
+    text-align: center;
+    top: 28px;
+    width: 150px;
+    background-color: lightgrey;
+	max-height: 0; 
+	transition: .5s;
+	z-index: -10;
+	overflow: hidden;
+}
+
+/*list items of dropdown menu*/
+.clarinet-drop > li, .electronic-drop > li{
+	display: flex;
+	align-items: center;
+    font-family: sans-serif;
+	font-weight: 400;
+	font-size: 14;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+/*hover effect for list items of dropdown menu*/
+.clarinet-drop li:hover, .electronic-drop li:hover{
+    background-color: beige;
+}
+
+
+/*MOBILE HEADER*/
+
+/*mobile header*/
+.mob-header {
+	position: fixed;
+	left: 0; top: 0; right: 0;
+	height: 40px;
+	background-color: rgba(0,0,0,.8);
+	color: red;
+	text-shadow: 0 0 15px 1px;
+	z-index: 1;
+	display: none;
+}
+
+/*mobile logo*/
+.mob-logo{
+	position: absolute;
+	left: 20px;
+	top: 10px;
+	font-size: 20px;
+	font-family: "Orbitron";
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+/*hamburger menu wrapper*/
+.hamburger{
+	position: absolute;
+	top: 3px;
+	right: 20px;
+	height: 36px;
+	width: 35px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+/*general settings for divs inside hamburger menu*/
+.ham1, .ham2, .ham3{
+	position: absolute;
+	left: 5px;
+	width: 25px;
+	height: 2px;
+	background-color: white;
+	border-radius: 1px;
+}
+
+/*Individual height positions for each hamburger menu div*/
+.ham1{
+	top: 7px;
+}
+
+.ham2{
+	top: 16px;
+}
+
+.ham3{
+	top: 25px;
+}
+
+/*hidden mobile nav menu*/
+.mob-nav-menu{
+	display: none;
+	width: 100%;
+	max-height: 0;
+	background-color: white;
+	overflow: hidden; 
+	transition: .5s;
+}
+
+/*mobile nav links*/
+.mob-nav-link{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-sizing: border-box;
+	height: 50px;
+	border-bottom: solid #333 1px;
+}
+
+.mob-nav-menu a{
+	color: #555;
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: 200;
+}
+
+.mob-nav-menu a:hover > div{
+	background-color: beige;
+}
+
+
+/*table used for discographies and mastering portfolio*/
 table {
+	box-sizing: border-box;
 	text-align: center;
 	color: white;
 	margin: 30px auto 20px;
 	width: 900px;
-	border: solid white 1px;
 	font-size: 14px;
+	border-collapse: collapse;
 }
 
+/*link to album in one of the sections*/
 table a{
 	color: gold;
 }
 
+/*link hover*/
 table a:hover{
 	color: beige;
 }
 
+/*table head*/
 th {
 	background-color: grey;
 	height: 40px;
-
 }
 
-tr {
-
-}
-
+/*table data*/
 td {
+	box-sizing: border-box;
+	margin: 0;
 	background-color: rgba(0,0,0,.8);
 	border: solid white 1px;
 	width: 200px;
+	word-break: break-all;
 }
 
+/*album image in table data*/
 td img{
 	width: 120px;
 	opacity: 1;
@@ -131,6 +325,38 @@ td p{
 	margin: 0;
 }
 
+/*Background Video wrapper for Clarinet and Electronic Music pages*/
+.fullscreen-bg {
+    position: fixed;
+    top: 40px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+/*Background Video for Clarinet and Electronic Music pages*/
+.fullscreen-bg__video {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*NAVIGATION MENU for clarinet and electronic music pages*/
+
+/*menu wrapper*/
+.nav-img-menu{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/*images with links*/
 .nav-img-menu img{
 	width: 300px;
 	margin: 5px; border: 
@@ -139,83 +365,41 @@ td p{
 	border: solid black 2px;
 	opacity: 1;
 }
+
 .nav-img-menu img:hover{
-	opacity: .7;
-	transition: .4s;
+	border: solid red 2px;
 }
+
 
 #contact-nav{
 	cursor: pointer;
 }
 
-.header {
-	position: fixed;
-	left: 0; bottom: 0; right: 0;
-	height: 40px;
-	background-color: rgba(0,0,0,.8);
-	text-align: center;
-	padding-top: 10px;
-	color: red;
-	text-shadow: 2px 5px 15px;
-	font-size: 30px;
-	font-family: impact;
-	z-index: 1;
-}
 
-.flex-justify-around{
-	display: flex;
-	justify-content: space-around;
-}
+/*CONTAINERS*/
 
-.flex-justify-between{
-	display: flex;
-	justify-content: space-between;
-}
-
-.wrap-one-third{
-	display: inline-block;
-	text-align: center;
-	padding: 20px;
-}
-
-.wrap-one-third img{
-	width: 200px;
-}
-
-.container-light{
-	padding: 40px 0;
-	margin: 0 auto;
-	width: 1100px;
-	background-color: rgba(242,242,242,.9);
-}
-
-.container-light-offset{
-	margin: 580px auto 0;
-	width: 1100px;
-	background-color: rgba(242,242,242,.9);
-}
-
+/*main container with gradient color that holds info on most pages*/
 .container-dark{
 	padding: 40px 0;
-	margin: 60px auto;
+	margin: 40px auto;
 	width: 1100px;
 	background: #8e9eab; /* fallback for old browsers */
 	background: -webkit-radial-gradient(circle, #8e9eab 1%, #eef2f3) no-repeat center center fixed; /* Chrome 10-25, Safari 5.1-6 */
 	background: radial-gradient(circle, #8e9eab 1% , #eef2f3) no-repeat center center fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	border: solid black 1px;
-	border-radius: 5px;
+	/*border: solid black 1px;*/
 }
 
+/*main container with gradient for Audio Engineering page*/
 .container-dark-ae{
-	margin: 20px auto;
+	padding: 20px 0;
+	margin: 0 auto;
 	width: 1100px;
 	background: #8e9eab; /* fallback for old browsers */
 	background: -webkit-radial-gradient(circle, #8e9eab 1%, #eef2f3) no-repeat center center fixed; /* Chrome 10-25, Safari 5.1-6 */
 	background: radial-gradient(circle, #8e9eab 1% , #eef2f3) no-repeat center center fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	border: solid black 1px;
-	border-radius: 5px;
 }
 
+/*main container for clarinet and electronic music pages because of a large margin offset for viewable background video*/
 .container-dark-offset{
 	margin: 580px auto 0;
 	width: 1100px;
@@ -224,40 +408,48 @@ td p{
 	background: radial-gradient(circle, #8e9eab 1% , #eef2f3) no-repeat center center fixed; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+/*horizontal line*/
 .hr{
 	margin: 30px 0 30px 0;
 	height: 2px;
 	background-color: grey;
 }
 
-.center {
-	margin: 0 auto;
-	text-align: center;
-}
 
+/*GALLERY*/
+
+/*wrapper for image gallery content*/
 .gallery-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 	margin: 0 auto;
 	width: 900px;
 	background-color: rgba(0,0,0,.3);
 	text-align: center;
 }
 
+/*wrapper for each image*/
+.gallery-container div{
+	width: 250px;
+	margin: 10px;
+}
+
+/*gallery image*/
 .gallery-container img{
 	cursor: pointer;
-	transform: scale(1,1);
 	border: solid beige 1px;
 }
 
 .gallery-container img:hover{
-	transform: scale(1.1,1.1);
 	border: solid red 1px;
-	transition: .4s;
 }
 
+/*forward or backward button for showing next or previous image once inside gallery modal*/
 .gal-btn{
 	background-color: rgba(255,255,255,.3);
-	padding: 60px 30px;
-	margin: 0 80px;
+	padding: 30px 15px;
 	cursor: pointer;
 	color: white;
 	font-size: 80px;
@@ -271,12 +463,12 @@ td p{
 	text-shadow: 2px 5px 20px;
 }
 
-
+/*hi res image inside Gallery Modal*/
 .gallery-img{
-	width: 600px;
+	width: 800px;
 }
 
-
+/*Modal*/
 .lightbox {
 	position: fixed;
 	top: 0; right: 0; bottom: 0; left: 0;
@@ -287,18 +479,30 @@ td p{
 	transition: opacity 400ms ease-in;
 	pointer-events: none;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	z-index: 5;
 }
 
+/*X for closing the lightbox, located on top right of the screen*/
+.close{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-family: Arial;
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
+	z-index: 10;	
+}
+
+/*div inside Modal that holds the hi-res galler image*/
 .lightbox-window{
 	text-align: center;
-	width: 600px;
+	width: 800px;
 	position: relative;
 	margin: 20% auto;
-	padding: 20px;
-	border-radius: 10px;
+	padding: 1px;
 	background: #fff;
 	background: -moz-linear-gradient(#fff, #999);
 	background: -webkit-linear-gradient(#fff, #999);
@@ -307,73 +511,333 @@ td p{
 	z-index: 10;
 }
 
+/*fullscreen clickable area inside Modal that closes the Modal*/
 #close-lightbox{
 	position: fixed;
 	top: 0; right: 0; bottom: 0; left: 0;
 	z-index: 0;
 }
 
-.border500 {
+/*wrapper for embedded videos*/
+.video-border {
+	position: relative;
 	color: white;
 	width: 500px;
-	margin: 30px auto;
-	background: #000000; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to left, #000000 , #434343); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to left, #000000 , #434343); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
-	border-radius: 10px;
-	padding: 20px;
-	box-shadow: 4px 5px 10px;
+	margin: 35px auto;
+	background: #444;   
+	border-radius: 4px;
+	padding: 15px;
 }
 
-#my-contact-form{
-	height: 500px;
-	width: 600px;
-	border: solid black 1px;
-}
-
-.input-field {
-  font-size: 14px;
-  width: 250px;
-  height: 20px;
-  border-radius: 5px;
-  background-color: whitesmoke;
-}
-
-.my-text-area {
-  width: 500px;
-  height: 250px;
-  resize: none;
-  font-size: 14px;
-}
-
-.my-submit-btn {
-  text-align: center;
-  background-color: #e6ecf7;
-  width: 100px;
-  height: 40px;
-  border: 1px solid black;
-  border-radius: 7px;
-  transition: all 0.5s ease-in;
-  font-size: 14px;
-  cursor: pointer;
-  font-family: Arial;
-}
-
-.my-submit-btn:hover {
-  background-color: grey;
-  color: white;
-}
-
-.span-red {
-  color: red;
-}
-
-#fake-thank-you{
-	margin: 60px auto;
-	color: black;
-	display: none;
-
+/*text inside video-border wrapper*/
+.video-description{
+	/*width: 490px;*/
+	margin: 0 auto;
 }
 
 
+
+/*CONTACT SECTION*/
+
+
+/*#contact{
+	margin: auto;
+	width: 800px;
+	height: 400px;
+	background-color: rgba(0,0,0,.5);
+}*/
+
+#contact-inside{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: white;
+	font-family: sans-serif;
+	font-weight: 100;
+	margin: 40px auto;
+	width: 400px;
+	height: 250px;
+	background-color: rgba(0,0,0,.3);
+}
+
+#contact-inside :nth-child(1){
+	font-family: sans-serif;
+	font-weight: 400;
+	font-size: 20px;	
+}
+
+
+#soc-media-div{
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+}
+
+#soc-media-div img{
+	width: 50px;
+	height: 50px;
+	margin: 0 10px;
+	border-radius: 50%;
+}
+
+#soc-media-div img:hover{
+	/*background-color: beige;*/
+	box-shadow: 0 0 10px 2px beige;
+}
+
+
+/*ANIMATIONS*/
+
+@keyframes ham1-open{
+	from{
+		transform: rotateZ(0deg);
+		top: 7px;
+		
+	}
+	to{
+		transform: rotateZ(45deg);
+		top: 15px;
+	}
+}
+
+@keyframes ham1-close{
+	from{
+		transform: rotateZ(45deg);
+		top: 15px;
+	}
+	to{
+		transform: rotateZ(0deg);
+		top: 7px;
+	}
+}
+
+@keyframes ham2-open{
+	from{
+		left: 5px;
+	}
+	to{
+		left: 36px;
+	}
+}
+
+@keyframes ham2-close{
+	from{
+		left: 36px;
+	}
+	to{
+		left: 5px;
+	}
+}
+
+@keyframes ham3-open{
+	from{
+		transform: rotateZ(0deg);
+		top: 25px;
+	}
+	to{
+		transform: rotateZ(-45deg);
+		top: 15px;
+	}
+}
+
+@keyframes ham3-close{
+	from{
+		transform: rotateZ(-45deg);
+		top: 15px;
+	}
+	to{
+		transform: rotateZ(0deg);
+		top: 25px;
+	}
+}
+
+
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 1100px){
+	
+	.nav-img-menu img{
+		width: 200px;
+	}
+	
+	.nav-img-menu h1{
+		font-size: 20px;
+	}
+	
+	.container-dark {
+		padding: 40px 0;
+		margin: 40px auto;
+		width: 900px;
+	}
+	
+	.container-dark-offset, .container-dark-ae{
+		width: 900px;
+	}
+	
+	.gallery-container{
+		width: 700px;
+	}
+	
+	.gallery-container div{
+		width: 200px;
+	}
+	
+	.gallery-container img{
+		width: 70%;
+	}
+	
+	.gallery-container h3{
+		font-size: 13px;
+	}
+	
+	.lightbox-window{
+		width: 500px;
+		padding: 1px;
+		border-radius: 0;
+	}
+	
+	.gallery-img{
+		width: 500px;
+	}
+	
+	.discography-table, .mastering-table {
+		width: 700px;
+		border: none;
+	}
+}
+
+@media (max-width: 900px){
+	
+	.container-dark, .container-dark-ae {
+		padding: 40px 0;
+		margin: 40px auto;
+		width: 100%;
+	}
+	
+	.container-dark-offset{
+		width: 100%;
+	}
+	
+	.gallery-container{
+		width: 100%;
+	}
+	
+	.gallery-container div{
+		width: 180px;
+	}
+	
+	.gallery-container img{
+		width: 150px;
+	}
+	
+	/*table {
+		width: 700px;
+		border: none;
+	}*/
+	
+	
+}
+
+@media (max-width: 760px){
+	
+	header{
+		display: none;
+	}
+	
+	.mob-header{
+        display: block;
+    }
+	
+	.mob-nav-menu{
+		display: block;
+}
+	
+	.container-dark-offset{
+		margin: 40px 0;
+		width: 100%;
+	}
+	
+	.nav-img-menu{
+		flex-direction: column;
+	}
+	
+	.nav-img-menu img{
+		width: 70%;
+	}
+	
+	.nav-img-menu h1{
+		font-size: 25px;
+	}
+	
+	.video-border{
+		width: 350px;
+	}
+	
+	.video-description{
+		width: 280px;
+		font-size: 13px;
+	}
+	
+	.gallery-container div{
+		width: 160px;
+	}
+	
+	.lightbox-window{
+		flex-direction: column;
+		width: 100%;
+		padding: 1px;
+		border-radius: 0;
+	}
+	
+	.gal-btn{
+		display: none;
+	}
+	
+	.gallery-img{
+		width: 100%;
+	}
+	
+	iframe{
+		width: 300px;
+		height: 168px;
+	}
+	
+	.audio-frame{
+		width: 100%;
+		display: block;
+	}
+	
+	.discography-table, .mastering-table{
+		width: 100%;
+	}
+	
+	/*hides the info section of the discography table for mobile view*/
+	.discography-table td:nth-child(4), .discography-table th:nth-child(4){
+		display: none;
+	}
+	
+	.mastering-table td:nth-child(4), .mastering-table th:nth-child(4){
+		display: none;
+	}
+	
+	/*CONTACT SECTION*/
+	
+	#contact{
+		width: 100%;
+	}
+	
+	#contact-inside{
+		margin: 0;
+		/*height: 100%;*/
+		width: 100%
+	}
+	
+	#contact-inside img{
+		width: 100px;
+		height: 100px;
+	}	
+	
+}
 
