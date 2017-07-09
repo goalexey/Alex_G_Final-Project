@@ -9,14 +9,28 @@
 </head>
 <body>
 
-<!--HEADER MENU-->
-<header>
-	<div><a href="index.html">HOME</a></div>
-	<div><a href="clarinet.html">CLARINET</a></div>
-	<div><a href="audio-engineering.html">AUDIO ENGINEERING</a></div>
-	<div><a href="electronic-music.html">ELECTRONIC MUSIC</a></div>
-	<div id="contact-nav"><a onclick="openContact()">CONTACT</a></div>
-</header>
+<!--HEADER SECTION-->
+	<header>
+        <div><a href="index.html">HOME</a></div>
+        <div class="nav-clarinet"><a href="clarinet.html">CLARINET</a>
+            <!--drop-down menu-->
+            <ul class="clarinet-drop">
+                <li><a href="clarinet-electronic.html">Electronic Clarinetist</a></li>
+                <li><a href="clarinet-discography.html">Discography</a></li>
+                <li><a href="clarinet-tutorials.html">Tutorial Videos</a></li>
+            </ul>
+        </div>
+        <div><a href="audio-engineering.html">AUDIO ENGINEERING</a></div>
+        <div class="nav-electronic"><a href="#">ELECTRONIC MUSIC</a>
+            <!--drop-down menu-->
+            <ul class="electronic-drop">
+                <li><a href="electronic-releases.html">Music Releases</a></li>
+                <li><a href="electronic-projects.html">Special Projects</a></li>
+                <li><a href="electronic-mixes.html">Mixes</a></li>
+            </ul>
+        </div>
+        <div id="contact-nav"><a onclick="openContact()">CONTACT</a></div>
+	</header>
 
  <!--MOBILE HEADER-->
 	<div class="mob-header">
