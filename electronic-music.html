@@ -150,21 +150,16 @@
 	<!-- CONTACT -->
 
 	<div id="contact" class="lightbox">
-		<div class="lightbox-window">
-			<div id="my-contact-form" method="post">
-				<label>Name: <span class="span-red">*</span><br>
-					<input class="input-field" type="text" name="name" placeholder="" value="">
-				</label><br><br>
-				<label>Email: <span class="span-red">*</span><br>
-					<input class="input-field" type="email" placeholder="" name="email" value="">
-				</label><br><br><br>
-				<label>Your Message Here:<br>
-					<textarea class="my-text-area"  name="message"></textarea>
-				</label>
-				<br>
-				<button class="my-submit-btn" type="submit" name="submit" onclick="openFakeThankYou()">Submit</button>
+		<div class="close" onclick="closeContact()">X</div>
+		<div class="lightbox-window"> 
+			<div id="contact-inside">
+				<div>Email:</div>
+				<div>goalexey@gmail.com</div>
+				<div id="soc-media-div">
+					<a href="http://facebook.com/goalexey" target="_blank"><img src="images/1498608190_facebook.svg" /></a>
+					<a href="http://soundcloud.com/kronodigger" target="_blank"><img src="images/if_soundcloud_1233005.svg" /></a>
+				</div>
 			</div>
-			<div id="fake-thank-you">Thank you for submitting!</div>
 		</div>
 		<div id="close-lightbox" onclick="closeContact()"></div>
 	</div>
